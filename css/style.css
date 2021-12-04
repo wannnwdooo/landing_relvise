@@ -1,5 +1,5 @@
 
-/*Обнуление*/
+/*--------------------------------------Обнуление-----------------------------------*/
 *{
     padding: 0;
     margin: 0;
@@ -43,7 +43,7 @@ body {
     font-size: 14px;
     color: #252B42;
     font-weight: 500;
-    font-family: Montserrat;
+    font-family: Montserrat, serif;
     background: #FAFAFA;
 }
 .wrapper {
@@ -52,7 +52,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-/*--Технические------------*/
+/*------------------------------------Технические----------------------*/
 .services__column_ibg {
     position: relative;
 }
@@ -65,32 +65,16 @@ body {
 ._ibg {
     position: relative;
 }
-/*--Page------------*/
+
+
+/*--------------------------------------Page-----------------------------*/
 .page {
     flex: 1 1 auto;
 }
-
-.header-block__title:not(:last-child) {
-    margin: 0 0 10px 0;
+.page__services {
 }
 
-.header-block{
-    letter-spacing: 0.2px;
-    text-align: center;
-}
 
-.header-block__title {
-    color: #252B42;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 142%;
-}
-.header-block__sub-title {
-    color: #737373;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 143%;
-}
 .page__clients:not(:last-child) {
     margin: 0 0 10px 0;
 }
@@ -108,7 +92,27 @@ body {
     left: 0;
     object-fit: cover;
 }
-/*--Шапка------------*/
+.header-block{
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.header-block__title {
+    color: #252B42;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 142%;
+}
+.header-block__title:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+.header-block__sub-title {
+    color: #737373;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+}
+/*--------------------------------------Шапка----------------------------*/
 .main-header {
     position: absolute;
     width: 100%;
@@ -186,22 +190,23 @@ body {
         font-size: 20px;
     }
 }
-
-/*--Main-block------------------------------------------------------*/
-.main {
-    flex: 1 1 auto;
-}
+/*------------------------------Main-block------------------------------------------------*/
 .main-block {
+    flex: 1 1 auto;
     position: relative;
 }
-.main-block__container {
 
+.main-block__container {
 }
+
 .main-block__body {
     padding: 184px 0 191px 0;
     position: relative;
     z-index: 2;
     max-width: 400px;
+}
+.main-block__body > *:not(:last-child) {
+    margin-right: 10px;
 }
 @media (max-width: 992px) {
     .main-block__body {
@@ -249,11 +254,6 @@ body {
     background: #ffffff;
     color: #FF7B47;
 }
-@media (max-width: 400px) {
-    .main-block__button__transparent {
-        min-width: 186px;
-    }
-}
 .main-block__button__transparent {
     border: 1px solid #0D5C63;
     box-sizing: border-box;
@@ -271,17 +271,14 @@ body {
     flex: 0 1 50%;
     transition: all 0.3s ease 0s;
 }
+@media (max-width: 403px) {
+    .main-block__button__transparent {
+        min-width: 186px;
+    }
+}
 .main-block__button__transparent:hover {
     background: #0D5C63;
     color: #ffffff;
-}
-.main-block__body > *:not(:last-child) {
-    margin-right: 10px;
-}
-@media (max-width: 1300px) {
-    .main-block__image img {
-        object-position: center;
-    }
 }
 .main-block__image {
     position: absolute;
@@ -295,9 +292,22 @@ body {
         opacity: 0.5;
     }
 }
-/*--------service------------------------------------------------------------------*/
+@media (max-width: 1300px) {
+    .main-block__image img {
+        object-position: center;
+    }
+}
+/*-----------------------service------------------------------------------------------*/
+.page__services {
+    margin: -111px 0 0 0 ;
+    z-index: 2;
+    position: relative;
+}
+.services {
+}
+.services__container {
+}
 .services__body {
-
 }
 @media (min-width:670px) {
     .services__body {
@@ -332,6 +342,8 @@ body {
 
     }
 }
+.services__item {
+}
 .item-service > *:not(:last-child){
     margin: 0 0 10px 0;
 }
@@ -352,7 +364,6 @@ body {
 .item-service.item-service__three {
     background-image: url("/img/services/financial-green.svg") ;
 }
-
 .item-service__one:hover {
     background: #0D5C63;
     color: #ffffff;
@@ -374,9 +385,6 @@ body {
     background-repeat: no-repeat;
     background-position: 35px 35px
 }
-
-.item-service__icon__1:hover {
-}
 .item-service__tittle {
     font-weight: 700;
     font-size: 24px;
@@ -389,21 +397,6 @@ body {
     font-size: 14px;
     line-height: 143%;
     letter-spacing: 0.2px;
-
-}
-.item-service__green {
-    background-color: #0D5C63;
-}
-.item-service__green .item-service__tittle {
-    color: #FFFFFF;
-}
-.item-service__green .item-service__text {
-    color: #FFFFFF;
-}
-.page__services {
-    margin: -111px 0 0 0 ;
-    z-index: 2;
-    position: relative;
 }
 /*----------------achievements---------------------------------------------*/
 .achievements {
@@ -427,43 +420,6 @@ body {
         margin: 0 0 30px 0;
     }
 }
-.achievements__items {
-    background-color: #fff;
-    padding: 30px;
-    font-weight: 700;
-    text-align: center;
-    height: 100%;
-}
-
-.item-achievement > *:not(:last-child){
-    margin: 0 0 10px 0;
-}
-.item-achievement {
-    padding: 30px;
-}
-
-.item-achievement__icon {
-    height: 48px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-.item-achievement__value {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 142%;
-    letter-spacing: 0.2px;
-    color: #252B42;
-    text-align: center;
-}
-.item-achievement__text {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    letter-spacing: 0.1px;
-    color: #737373;
-}
 .achievements__body {
     display: flex;
     flex-wrap: wrap;
@@ -485,6 +441,41 @@ body {
         flex: 0 1 100%;
         padding: 10px 15px;
     }
+}
+.achievements__items {
+    background-color: #fff;
+    padding: 30px;
+    font-weight: 700;
+    text-align: center;
+    height: 100%;
+}
+.item-achievement > *:not(:last-child){
+    margin: 0 0 10px 0;
+}
+.item-achievement {
+    padding: 30px;
+}
+.item-achievement__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.item-achievement__value {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 142%;
+    letter-spacing: 0.2px;
+    color: #252B42;
+    text-align: center;
+}
+.item-achievement__text {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.1px;
+    color: #737373;
 }
 /*-------------------------practicle----------------------------------------------*/
 
